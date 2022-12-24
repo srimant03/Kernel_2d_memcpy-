@@ -1,0 +1,11 @@
+--- /linux-5.19.9/arch/x86/entry/syscalls/syscall_64.tbl    2022-11-23 12:12:09.100001245 +0000
++++ /ker4/arch/x86/entry/syscalls/syscall_64.tbl    2022-09-15 08:47:20.000000000 +0000
+@@ -372,7 +372,7 @@
+ 448	common	process_mrelease		sys_process_mrelease
+ 449	common	futex_waitv			    sys_futex_waitv
+ 450	common	set_mempolicy_home_node	sys_set_mempolicy_home_node
+-451	common	kernel_2d_memcpy		sys_kernel_2d_memcpy
++
+ #
+ # Due to a historical design error, certain syscalls are numbered differently
+ # in x32 as compared to native x86_64.  These syscalls have numbers 512-547
