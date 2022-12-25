@@ -25,9 +25,32 @@ Edit the syscall table
 
 Add your syscall at the end of the table using the next available number as your syscall number
 
-`451
+`-451	common	kernel_2d_memcpy		sys_kernel_2d_memcpy`
 
 ## How to test your SysCall?
+
+Compile the SysCall by recompiling your kernel and rebooting it through the following commands
+
+```make
+
+make modules_install
+
+cp -v arch/x86_64/boot/bzImage /boot/vmlinuz-[kernelname]
+
+mkinitcpio -k 5.19.9 -g /boot/initramfs-[kernelname]
+
+grub-mkconfig -o /boot/grub/grub.cfg
+
+reboot
+```
+
+Clone the entire repository & run the main.c file through the following commands
+
+```
+make
+
+./a.out
+```
 
 ## Generating a patch file
 
