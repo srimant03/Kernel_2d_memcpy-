@@ -57,9 +57,9 @@ make
 A patch file is a text file that consists of a list of differences and is produced by running the related diff program with the original and updated file as arguments. The patch file can be generated to see the differences between the original and the modified kernels.
 
 ```
-diff -u linux-5.19.9/arch/x86/entry/syscalls/syscall_64.tbl [modified_kernel]/arch/x86/entry/syscalls/syscall_64.tbl >>patch_syscall_table
+diff -u linux-5.19.9/arch/x86/entry/syscalls/syscall_64.tbl [modified_kernel]/arch/x86/entry/syscalls/syscall_64.tbl >>patch_systable.patch
 
-diff -u linux-5.19.9/kernel/sys.c [modified_kernel]/kernel/sys.c >>patch_sys
+diff -u linux-5.19.9/kernel/sys.c [modified_kernel]/kernel/sys.c >>patch_sys.patch
 
 ```
 
